@@ -7,7 +7,8 @@ from PIL import Image
 st.set_page_config(page_title="Cat vs Dog Classifier", layout="centered")
 st.title("🐱🐶 Cat vs Dog Image Classifier")
 
-uploaded_file = st.file_uploader("Choose an image of dog or cat...", type=["jpg", "jpeg", "png"])
+# ✅ Allow JFIF too
+uploaded_file = st.file_uploader("Choose an image of dog or cat...", type=["jpg", "jpeg", "png", "jfif"])
 
 if uploaded_file is not None:
     try:
